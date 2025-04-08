@@ -26,21 +26,19 @@
         <h2> Attendees: </h2>
           <details>
             <summary>Mario</summary>
-            <img src="./mario.jpeg">
+            <img src="./mario.jpeg" alt="image of Mario">
           </details>
           <details>
             <summary>Luigi</summary>
-            <img src="./luigi.jpeg">
+            <img src="./luigi.jpeg" alt="image of Luigi">
           </details>
           <details>
             <summary>Monty Mole</summary>
-            <img src="./montymole.jpeg">
+            <img src="./montymole.jpeg" alt="image of Monty Mole">
           </details>
       </section>
     </header>
-
     <hr>
-
     <main>
       <div> 
         <h3 id="goals">Goals - in order of priority</h3> 
@@ -49,7 +47,7 @@
           <li> We want to create an app that everyone will use <strong>daily</strong> - <i>think, we want this app to hold us accountable to practice drifting everyday, so we become faster drivers! </i> </li>
         </ol>
       </div>
-      <span> <h3 id="brainstorming">Brainstorming</h3> </span>  
+      <h3 id="brainstorming">Brainstorming</h3>  
       <ul>
         <li> Include customizable habits - want to go beyond the traditional habits like practicing drifts, steak flipping etc. </li>
         <li> Add a leaderboard, users are more engaged when there is some competition - imagine using power ups here, use a blue shell to knock Princess Peach from first! </li>
@@ -91,7 +89,7 @@
         </select>
 
         <label for="times">What time is it for you?</label>
-        <input type="time" list="times" id="times"/>
+        <input type="time" list="times"/>
         <datalist id="times">
           <option value="12:00"></option>
           <option value="11:00"></option>
@@ -117,8 +115,9 @@
         </fieldset>
 
         <label for="feedback"> Additional Feedback: </label>
-        <textarea name="feedback"> Enter feedback here...</textarea>
+        <textarea name="feedback" id="feedback"> Enter feedback here...</textarea>
         <button type="submit">Submit</button>
+        <span>Thanks!</span>
       </form>
     </footer>
   </body>
