@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+  background-color: hsl(224, 85%, 31%);
+  color: white;
+}
+
+*{
+  font-family: "Poppins", sans-serif;
+  margin: 10px 10px 10px 10px;
+  --golden: rgb(255, 198, 26);
+}
+
+/* Header Styling */
+#templateTitle{
+  color: color(display-p3 1 0 0);
+  font-size: 1cm;
+  position: sticky;
+  top: 20px;
+}
+
+nav ul li{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+nav ul li:hover{
+  background-color: var(--golden, yellow);
+}
+
+nav ul{
+  background-color: #fee494;
+  margin-top: 2mm;
+  margin-bottom: 2mm;
+  margin-left: 2mm;
+  margin-right: 2mm;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  list-style: none;
+}
+
+@media (max-width: 800px){
+  nav ul{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
+
+.agenda, #attendees{
+  max-width: 90vw;
+  margin-left: 5vw;
+  min-width: 10vw;
+}
+
+/* Body Styling */
+h2, h3{
+  text-align: center; 
+  color: #fcd662; 
+}
+
+a[href="https://youtu.be/Je_2g6MS4IY?si=f6RoZcmq4hESTkT9"]{
+  text-decoration: none;
+  color: white;
+  font-style: italic;
+}
+
+a[href="https://game8.co/games/Super-Mario-RPG/archives/418691"]{
+  color: white;
+  font-style: italic;
+}
+
+img{
+  position: relative;
+  left: 3vw;
+}
+
+footer > h3{
+  margin: 25px;
+}
+
+/* Feedback Form Styling */
+form {
+  width: 80%;
+  height: 30%;
+  margin: auto;
+  margin-top: 50px;
+  border-style: solid;
+  border-color: white;
+  padding: 2vh 2vh 2vh 2vh;
+  border-radius: 15px;
+  border-width: 5px;
+  & > h3{
+    color: red;
+  }
+}
+
+h3 + p{
+  font-style: italic;
+}
+
+div.media{
+  display: grid;
+  row-gap: 10px; 
+  justify-content: center;
+  max-height: 100vh;
+}
+
+fieldset ~ datalist{
+  padding: 20px;
+}
+
+#submit:active{
+  box-shadow: 2px 2px 5px color-mix(in srgb, yellow 60%, blue 40%);
+}
+
+.initialForm{
+  display: inline;
+}
+
+.squares{
+  display: block;
+}
+
+h2:has(+ details){
+  font-size: 20px;
+}
