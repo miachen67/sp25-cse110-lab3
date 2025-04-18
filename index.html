@@ -4,26 +4,29 @@
     <meta charset="UTF-8"/>
     <title>Habit Tracker App</title>
     <link rel="icon" href="star.png"/>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <header>
-      <h1>Meeting Minutes (1/1/2050)  - Habit Tracker App</h1>
+      <h1 id="templateTitle">Meeting Minutes (1/1/2050)  - Habit Tracker App</h1>
       <nav>
         <ul>
-          <li><a href="#agenda">Agenda</a></li>
-          <li><a href="#attendees">Attendees</a></li>
-          <li><a href="#goals">Goals</a></li>
-          <li><a href="#brainstorming">Brainstorm</a></li>
-          <li><a href="#closing">Brainstorm</a></li>
+          <li><a class="navText" href="#agenda">Agenda</a></li>
+          <li><a class="navText" href="#attendees">Attendees</a></li>
+          <li><a class="navText" href="#goals">Goals</a></li>
+          <li><a class="navText" href="#brainstorming">Brainstorm</a></li>
+          <li><a class="navText" href="#closing">Brainstorm</a></li>
         </ul>
       </nav>
-      <h2 id="agenda">Agenda</h2>
-      <ul>
-        <li>Goals</li>
-        <li>Brainstorming</li>
-      </ul>
+      <div class="agenda">
+        <h2 id="agenda">Today's Agenda</h2>
+        <ul>
+          <li>Goals</li>
+          <li>Brainstorming</li>
+        </ul>
+      </div>
       <section id="attendees">
-        <h2> Attendees: </h2>
+        <h2> Attendees </h2>
           <details>
             <summary>Mario</summary>
             <img src="./mario.jpeg" alt="image of Mario">
@@ -66,13 +69,14 @@
         To accomplish goals, we want our app to include habits that users can customize.
       </p>
       <h3>Watch/Listen to the Meeting</h3>
-      <audio controls src="./mariokart.mp3"></audio>
-      <video controls>
-        <source src="./mariokart.mp4"/>
-      </video>
-      <a href="https://youtu.be/Je_2g6MS4IY?si=f6RoZcmq4hESTkT9"> <br/>
-        Source: Mariokart Mario 2 Minute Action Toothbrush timer with Music</a>
-      
+      <div class="media">
+        <audio controls src="./mariokart.mp3"></audio>
+        <video controls>
+          <source src="./mariokart.mp4"/>
+        </video>
+        <a href="https://youtu.be/Je_2g6MS4IY?si=f6RoZcmq4hESTkT9"> <br/>
+          Source: Mariokart Mario 2 Minute Action Toothbrush timer with Music</a>  
+      </div>
       <h3>Action Items</h3>
       <ul>
         <li>Design mockup of UI - Mario</li>
@@ -81,44 +85,49 @@
 
       <form>
         <h3>Question/Feedback Form</h3>
-        <label>
-          Date: <input type="date"/>
-        </label>
-        <label for="team">What sub-team are you on?</label>
-        <select id="team">
-          <option value="Mario, Luigi, Monty Mole, Toad">Mario, Luigi, Monty Mole, Toad</option>
-          <option value="Waluigi, Bowser, Princess Peach">Waluigi, Bowser, Princess Peach</option>
-        </select>
-
-        <label for="times">What time is it for you?</label>
-        <input type="time" list="possibletimes" id="times"/>
-        <datalist id="possibletimes">
-          <option value="12:00"></option>
-          <option value="11:00"></option>
-          <option value="10:00"></option>
-        </datalist>
-        <fieldset>
-          <legend>Name</legend>
-          <input type="radio" id="mario" name="character"/>
-          <label for="mario">Mario</label> <br/>
-          <input type="radio" id="luigi" name="character"/>
-          <label for="luigi">Luigi</label> <br/>
-          <input type="radio" id="montymole" name="character"/>
-          <label for="montymole">Monty Mole</label>
-        </fieldset>
-        <fieldset>
-          <legend>How did you feel about today's meeting?</legend>
-          <input type="checkbox" id="great" name="feels"/>
-          <label for="great">Super!</label> <br/>
-          <input type="checkbox" id="meh" name="feels"/>
-          <label for="meh">Like a coin block with only one block, disappointing. We need to be more exciting and fun. </label> <br/>
-          <input type="checkbox" id="bad" name="feels"/>
-          <label for="bad">Dry Bones: We need to actually talk about important things.</label>
-        </fieldset>
+        <div class="initialForm">
+          <label>
+            Date: <input type="date"/>
+          </label>
+          <label for="team">What sub-team are you on?</label>
+          <select id="team">
+            <option value="Mario, Luigi, Monty Mole, Toad">Mario, Luigi, Monty Mole, Toad</option>
+            <option value="Waluigi, Bowser, Princess Peach">Waluigi, Bowser, Princess Peach</option>
+          </select>
+  
+          <label for="times">What time is it for you?</label>
+          <input type="time" list="possibletimes" id="times"/>
+          <datalist id="possibletimes">
+            <option value="12:00"></option>
+            <option value="11:00"></option>
+            <option value="10:00"></option>
+          </datalist>
+        </div>
+        <div class="squares">
+          <fieldset>
+            <legend>Name</legend>
+            <input type="radio" id="mario" name="character"/>
+            <label for="mario">Mario</label> <br/>
+            <input type="radio" id="luigi" name="character"/>
+            <label for="luigi">Luigi</label> <br/>
+            <input type="radio" id="montymole" name="character"/>
+            <label for="montymole">Monty Mole</label>
+          </fieldset>
+          <fieldset>
+            <legend>How did you feel about today's meeting?</legend>
+            <input type="checkbox" id="great" name="feels"/>
+            <label for="great">Super!</label> <br/>
+            <input type="checkbox" id="meh" name="feels"/>
+            <label for="meh">Like a coin block with only one block, disappointing. We need to be more exciting and fun. </label> <br/>
+            <input type="checkbox" id="bad" name="feels"/>
+            <label for="bad">Dry Bones: We need to actually talk about important things.</label>
+          </fieldset>
+        </div>
+        
 
         <label for="feedback"> Additional Feedback: </label>
         <textarea name="feedback" id="feedback"> Enter feedback here...</textarea>
-        <button type="submit">Submit</button>
+        <button type="submit" id="submit">Submit</button>
         <span>Thanks!</span>
       </form>
     </footer>
